@@ -1,0 +1,10 @@
+a {
+  color: $blue;
+  text-decoration: underline;
+  outline: 0;
+  &:hover,
+  &:focus {
+    color: lighten($blue, 20%);
+  }
+
+}
