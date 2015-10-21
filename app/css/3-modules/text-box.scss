@@ -1,0 +1,23 @@
+.text-box {
+  background-color: $grey;
+  height: 234px;
+
+  .wrapper p {
+      flex-grow: 2;
+      font-size: 30px;
+      color: #9282a0;
+    }
+
+    .button {
+      width: 218px;
+      height: 234px;
+      line-height: 234px;
+      background-color: $pink;
+      font-size: 50px;
+
+      &:hover {
+        background-color: darken($pink, 5%);
+      }
+    }
+}
+

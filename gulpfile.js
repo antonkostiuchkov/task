@@ -47,8 +47,11 @@ gulp.task('templates', function() {
 // JavaScript
 // Uglifies, concats
 gulp.task('scripts', function () {
-	gulp.src('app/js/*.js')
-		.pipe(concat('app.js'))
+	gulp.src([
+		'app/js/jquery-2.1.4.min.js',
+		'app/js/*.js'
+		])
+		.pipe(concat('all.js'))
 		.pipe(uglifyJs())
 		.pipe(gulp.dest('./dist'))
 		.pipe(reload({stream:true}));

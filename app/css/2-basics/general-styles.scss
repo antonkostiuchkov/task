@@ -1,0 +1,19 @@
+.wrapper {
+  box-sizing: border-box;
+  max-width: $width;
+  margin: 0 auto;
+  padding-left: 82px;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+.button {
+  font-family: 'Quicksand', sans-serif;
+  color: $white;
+  cursor: pointer;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}

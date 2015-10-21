@@ -1,0 +1,15 @@
+.slider .wrapper {
+  justify-content: space-around;
+
+  .button {
+    width: calc(1024px / 3);
+    font-size: 50px;
+    background-color: $purple;
+    align-self: stretch;
+    line-height: 297px;
+
+    &:hover {
+      background-color: darken($purple, 5%);
+    }
+  }
+}

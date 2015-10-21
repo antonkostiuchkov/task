@@ -1,0 +1,60 @@
+/*
+.banner {
+  height: 175px;
+  background-color: $blue;
+
+  h1 {
+    margin: 0 67px 0 0;
+    color: $white;
+    line-height: 1.08;
+    font-size: 16px;
+  }
+
+  a {
+    color: transparentize($white, 0.5);
+  }
+}
+*/
+
+.banner {
+  height: 577px;
+  background-color: $blue;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%
+}
+
+.lead{
+  margin-right: 216px;
+  clear: fix;
+
+  h1 {
+    margin: 0 0 50px 0;
+    color: $white;
+    line-height: 1.08;
+    font-size: 57px;
+    letter-spacing: 2px;
+  }
+
+  a {
+    color: transparentize($white, 0.5);
+    font-size: 34px;
+  }
+
+  .button {
+    font-size: 36px;
+    display: inline-block;
+    float: right;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: darken($blue, 5%);
+    }
+  }
+}
+
