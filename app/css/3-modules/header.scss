@@ -97,13 +97,21 @@ header {
   background-color: $dark-grey;
   color: $white;
   overflow: hidden;
-  font-size: responsive 14px 56px;
+  font-size: 25px;
   text-align: center;
+  touch-action: manipulation;
 
   @include breakpoint(xsmall) {
+    font-size: 14px;
     height: 37px;
     width: 37px;
     line-height: 37px;
+  }
+
+  div {
+    &.icon-cancel {
+      animation: tick 180ms ease-in;
+    }
   }
 }
 
@@ -165,4 +173,13 @@ header {
   opacity: 1;
   pointer-events: auto;
   overflow: hidden;
+}
+
+
+
+
+@keyframes tick {
+  0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(0); }
 }

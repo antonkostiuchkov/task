@@ -18,15 +18,16 @@
 
 
 .lead{
-  margin-right: 216px;
+  margin-right: 50px;
+  max-width: 725px;
   clear: fix;
 
   @include breakpoint(small) {
-    margin-right: 135px;
+    max-width: 455px;
   }
 
   @include breakpoint(xsmall) {
-    margin-right: 66px;
+    max-width: 230px;
   }
 
   h1 {
@@ -58,6 +59,7 @@
     float: right;
     height: 70px;
     width: 70px;
+    line-height: 70px;
     border-radius: 50%;
 
     &:hover {
@@ -74,6 +76,7 @@
     @include breakpoint(xsmall) {
       height: 30px;
       width: 30px;
+      line-height: 30px;
     }
 
   }

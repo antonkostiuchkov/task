@@ -8,13 +8,12 @@ function menuToggle () {
   var $menuToggle = $('#menu-toggle');
 
   $menuToggle.on('click', function() {
-    var $menu 		= $('.menu'),
-    		$overlay 	= $('.overlay'),
-    		$body			= $('body');
+    var $menu 		  = $('.menu'),
+        $iconMenu = $('.icon-menu');
 
     $menu.toggleClass('menu-open');
-    $overlay.toggleClass('is-open');
-    $body.toggleClass('is-open');
+    $('.overlay, body').toggleClass('is-open');
+    $iconMenu.toggleClass('icon-cancel');
     return false;
   });
 };
