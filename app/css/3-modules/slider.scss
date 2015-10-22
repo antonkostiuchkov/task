@@ -1,15 +1,82 @@
+$slider-height: 297px;
+
 .slider .wrapper {
-  justify-content: space-around;
+  padding: 0;
+
+  @include breakpoint(small) {
+    display: block;
+  }
+
+  @include breakpoint(xsmall) {
+    display: block;
+  }
 
   .button {
-    width: calc(1024px / 3);
     font-size: 50px;
     background-color: $purple;
     align-self: stretch;
-    line-height: 297px;
+    height: $slider-height;
+    width: $width / 3;
+    line-height: $slider-height;
+    text-align: center;
+
+    @include breakpoint(small) {
+      height: 550px;
+      line-height: 550px;
+      width: 100%;
+    }
+
+    @include breakpoint(xsmall) {
+      height: 275px;
+      line-height: 275px;
+    }
 
     &:hover {
-      background-color: darken($purple, 5%);
+      background-color: darken($purple, 8%);
     }
   }
+}
+
+
+[class^="img-"] {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: $slider-height;
+  
+  @include breakpoint(small) {
+    height: 550px;
+  }
+
+  @include breakpoint(xsmall) {
+    height: 275px;
+  }
+}
+
+.img-1 {
+  background-image: url(img/2.jpg);
+}
+
+.img-2 {
+  background-image: url(img/3.jpg);
+}
+
+.swipe {
+  overflow: hidden;
+  position: relative;
+  width: $width / 3;
+  
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  float: left;
+  position: relative;
 }

@@ -21,8 +21,8 @@ gulp.task('styles', function(){
 		csswring,
 		lost,
 		normalize,
-		autoprefixer,
-		rucksack
+		autoprefixer({ browsers: ['last 2 versions'] }),
+		rucksack({ fallbacks: true })
 	];
 
 	return gulp.src('app/css/main.scss')

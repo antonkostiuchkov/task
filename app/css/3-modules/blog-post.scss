@@ -1,3 +1,37 @@
-article .wrapper {
-  flex-grow: 1;
+.blog-post .wrapper {
+  display: block;
+  padding: 50px 80px 170px 80px;
+  clear: fix;
+  
+  @include breakpoint(small) {
+    padding: 75px 75px 100px 75px;
+  }
+
+  @include breakpoint(xsmall) {
+    padding: 35px 35px 50px 35px;
+  }
+
+  h2 {
+  	color: $blue;
+    margin: 0;
+  }
+
+  .row > p {
+  	width: calc(100% * 1/2 - (60px - 60px * 1/2));
+  	float: left;
+		margin-right: 60px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+    @include breakpoint(small) {
+      width: 100%;
+      margin-right: 0;
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
 }

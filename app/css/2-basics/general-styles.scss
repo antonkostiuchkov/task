@@ -2,7 +2,17 @@
   box-sizing: border-box;
   max-width: $width;
   margin: 0 auto;
-  padding-left: 82px;
+  display: flex;
+  height: 100%;
+  padding-left: 80px;
+
+  @include breakpoint(small) {
+    padding-left: 50px;
+  }
+
+  @include breakpoint(xsmall) {
+    padding-left: 25px;
+  }
 }
 
 ul {

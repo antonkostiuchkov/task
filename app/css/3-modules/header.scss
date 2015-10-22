@@ -1,48 +1,125 @@
-/*
+$header-height: 100px;
+
+
+
+header {
+  background-color: $grey;
+  color: $white;
+  height: $header-height;
+  
+  @include breakpoint(small) {
+    height: 75px;
+    clear: fix;
+    position: relative;
+  }
+
+  @include breakpoint(xsmall) {
+    height: 37px;
+  }
+
+  nav {
+    max-width: $width;
+    margin: 0 auto;
+
+    @include breakpoint(small) {
+      display: none;
+    }
+
+    ul {
+      padding: 0;
+      margin-left: 35px;
+    }
+  }
+}
+
+
+.large ul li{
+  display: inline-block;
+  line-height: $header-height;
+  margin: 0 15px;
+  text-transform: uppercase;
+
+  a {
+    color: $white;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+// Mobile styles
+
+.small {
+  display: none;
+
+  @include breakpoint(small) {
+    display: block;
+  }
+
+  h2 {
+    float: left;
+    line-height: 75px;
+    font-size: responsive 14px 56px;
+    margin: 0 19px;
+    letter-spacing: 1px;
+
+    @include breakpoint(xsmall) {
+      line-height: 37px;
+    }
+  }
+}
+
 .menu {
   overflow: hidden;
   position: relative;
   right: 0;
 }
 
+.menu-open {
+  right: 230px;
 
-header {
-  clear: fix;
-  background-color: $grey;
-  color: $white;
-  position: relative;
-  height: 37px;
-
-  h2 {
-    float: left;
-    line-height: 37px;
-    font-size: 14px;
-    margin: 0 19px;
-    letter-spacing: 1px;
+  .small .menu-side {
+    right: 0;
   }
 }
 
-
 #menu-toggle {
   display: inline-block;
-  height: 37px;
-  line-height: 37px;
-  padding: 0 12px;
+  height: 75px;
+  width: 75px;
+  line-height: 75px;
   float: right;
   background-color: $dark-grey;
   color: $white;
   overflow: hidden;
+  font-size: responsive 14px 56px;
+  text-align: center;
+
+  @include breakpoint(xsmall) {
+    height: 37px;
+    width: 37px;
+    line-height: 37px;
+  }
 }
 
 .menu-side {
   background-color: $dark-grey;
   color: $white;
   position: fixed;
-  top: 0;
+  top: 75px;
   right: -230px;
   width: 210px;
   height: 100%;
   padding: 0 10px;
+
+  @include breakpoint(xsmall) {
+    top: 37px;
+  }
 
   ul {
     margin: 37px 0;
@@ -60,47 +137,32 @@ header {
   }
 }
 
-.menu-open {
-  right: 230px;
-
-
-  .menu-side {
-    right: 0;
-  }
-}
 
 .menu, .menu-side {
   transition: all 200ms ease-in-out;
 }
-*/
 
 
 
+.overlay {
+  position: absolute;
+  background-color: rgba(black, 0.8);
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+  z-index: 1;
 
-
-header {
-  background-color: $grey;
-  color: $white;
-  height: 97px;
-
-  nav {
-    max-width: $width;
-    margin: 0 auto;
+  @include breakpoint(xsmall) {
+    top: 37px;
   }
 }
 
-.navbar ul li{
-  display: inline-block;
-  line-height: 97px;
-  margin: 0 15px;
-  text-transform: uppercase;
-
-  a {
-    color: $white;
-    font-size: 15px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  overflow: hidden;
 }

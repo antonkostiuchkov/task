@@ -1,51 +1,59 @@
-/*
-.banner {
-  height: 175px;
-  background-color: $blue;
-
-  h1 {
-    margin: 0 67px 0 0;
-    color: $white;
-    line-height: 1.08;
-    font-size: 16px;
-  }
-
-  a {
-    color: transparentize($white, 0.5);
-  }
-}
-*/
 
 .banner {
   height: 577px;
   background-color: $blue;
+  
+  @include breakpoint(small) {
+    height: 350px;
+  }
+
+  @include breakpoint(xsmall) {
+    height: 175px;
+  }
+  
+  .wrapper {
+    align-items: center;
+  }
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  height: 100%
-}
 
 .lead{
   margin-right: 216px;
   clear: fix;
 
+  @include breakpoint(small) {
+    margin-right: 135px;
+  }
+
+  @include breakpoint(xsmall) {
+    margin-right: 66px;
+  }
+
   h1 {
-    margin: 0 0 50px 0;
+    margin-bottom: 50px;
     color: $white;
     line-height: 1.08;
     font-size: 57px;
     letter-spacing: 2px;
+    
+    @include breakpoint(small) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(xsmall) {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   a {
     color: transparentize($white, 0.5);
-    font-size: 34px;
+    font-size: responsive 14px 34px;
   }
 
   .button {
-    font-size: 36px;
+    font-size: responsive 16px 36px;
     display: inline-block;
     float: right;
     height: 70px;
@@ -55,6 +63,19 @@
     &:hover {
       background-color: darken($blue, 5%);
     }
+    
+    @include breakpoint(small) {
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+
+    }
+
+    @include breakpoint(xsmall) {
+      height: 30px;
+      width: 30px;
+    }
+
   }
 }
 

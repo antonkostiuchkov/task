@@ -24,10 +24,10 @@
   </head>
 
 
-  <body class="menu">
+  <body>
 
     <header>
-      <nav class="navbar">
+      <nav class="large">
         <ul>
           <li><a href="#">PSD Websites</a></li>
           <li><a href="#">UI Kits</a></li>
@@ -36,22 +36,37 @@
           <li><a href="#">Blog</a></li>
         </ul>
       </nav>
+      
 
+      <!-- Menu toggle -->
+      <div class="small">
+        <h2>Navigation</h2>
+        <a href="#" id="menu-toggle">☰</a>
+      </div>
 
-      <!-- <h2>Navigation</h2>
-      <a href="#" id="menu-toggle">☰</a>
-      <nav class="menu-side">
-        <ul>
-          <li>PSD Websites</li>
-          <li>UI Kits</li>
-          <li>Premium PSD Files</li>
-          <li>About</li>
-          <li>Blog</li>
-        </ul>
-      </nav> -->
     </header>
 
-    <main>
+    <div class="overlay">
+
+    <main class="menu">
+      
+
+      <!-- Slideout menu -->
+      <div class="small">
+        <nav class="menu-side">
+          <ul>
+            <li>PSD Websites</li>
+            <li>UI Kits</li>
+            <li>Premium PSD Files</li>
+            <li>About</li>
+            <li>Blog</li>
+          </ul>
+        </nav>
+      </div>
+
+      
+      </div>
+
       <section class="banner">
         <div class="wrapper">
           <div class="lead">
@@ -72,17 +87,35 @@
       <section class="slider">
         <div class="wrapper">
           <div class="button">></div>
-          <img src="img/2.jpg" alt="">
-          <img src="img/3.jpg" alt="">
+          
+          <div id="slider" class="swipe">
+            <div class="swipe-wrap">
+              <div class="img-1"></div>
+              <div class="img-2"></div>
+            </div>
+          </div>
+
+          <div id="slider2" class="swipe">
+            <div class="swipe-wrap">
+              <div class="img-2"></div>
+              <div class="img-1"></div>
+            </div>
+          </div>
         </div>
       </section>
 
 
-      <article>
+      <article class="blog-post">
         <div class="wrapper">
           <h2>BlazRobar.com</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
-          <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+          <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
+          </div>
+          <div class="row">
+            <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+            <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+          </div>
         </div>
       </article>
     </main>

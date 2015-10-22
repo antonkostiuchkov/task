@@ -1,23 +1,51 @@
+$text-box-height: 234px;
+$text-box-heightS: 150px;
+$text-box-heightXS: 75px;
+
 .text-box {
   background-color: $grey;
-  height: 234px;
+  height: $text-box-height;
 
-  .wrapper p {
+  @include breakpoint(small) {
+    height: $text-box-heightS;
+  }
+
+  @include breakpoint(xsmall) {
+    height: $text-box-heightXS;
+  }
+
+  .wrapper {
+    align-items: center;
+
+    p {
       flex-grow: 2;
-      font-size: 30px;
+      font-size: responsive 10px 30px;
       color: #9282a0;
     }
 
     .button {
-      width: 218px;
-      height: 234px;
-      line-height: 234px;
+      width: $text-box-height;
+      height: $text-box-height;
+      line-height: $text-box-height;
       background-color: $pink;
-      font-size: 50px;
+      font-size: responsive 16px 50px;
+      
+      @include breakpoint(small) {
+        width: $text-box-heightS;
+        height: $text-box-heightS;
+        line-height: $text-box-heightS;
+      }
+
+      @include breakpoint(xsmall) {
+        width: $text-box-heightXS;
+        height: $text-box-heightXS;
+        line-height: $text-box-heightXS;
+      }
 
       &:hover {
-        background-color: darken($pink, 5%);
+        background-color: darken($pink, 8%);
       }
     }
+  }
 }
 
