@@ -15,14 +15,12 @@ $slider-height: 297px;
     font-size: 50px;
     background-color: $purple;
     align-self: stretch;
-    height: $slider-height;
+    @include squareCenter($slider-height);
     width: $width / 3;
-    line-height: $slider-height;
     text-align: center;
 
     @include breakpoint(small) {
-      height: 550px;
-      line-height: 550px;
+      @include squareCenter(550px);
       width: 100%;
     }
 
@@ -54,11 +52,27 @@ $slider-height: 297px;
 }
 
 .img-1 {
-  background-image: url(img/2.jpg);
+  background-image: url(img/2small.jpg);
+
+  @include breakpoint(small) {
+    background-image: url(img/2big.jpg);
+  }
+
+  @include breakpoint(xsmall) {
+    background-image: url(img/2small.jpg);
+  }
 }
 
 .img-2 {
-  background-image: url(img/3.jpg);
+  background-image: url(img/3small.jpg);
+
+  @include breakpoint(small) {
+    background-image: url(img/3big.jpg);
+  }
+
+  @include breakpoint(xsmall) {
+    background-image: url(img/3small.jpg);
+  }
 }
 
 .swipe {

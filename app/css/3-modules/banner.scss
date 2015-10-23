@@ -1,14 +1,18 @@
+$banner-height: 577px;
+$banner-heightS: 350px;
+$banner-heightXS: 175px;
+
 
 .banner {
-  height: 577px;
+  height: $banner-height;
   background-color: $blue;
   
   @include breakpoint(small) {
-    height: 350px;
+    height: $banner-heightS;
   }
 
   @include breakpoint(xsmall) {
-    height: 175px;
+    height: $banner-heightXS;
   }
   
   .wrapper {
@@ -57,9 +61,7 @@
     font-size: responsive 16px 36px;
     display: inline-block;
     float: right;
-    height: 70px;
-    width: 70px;
-    line-height: 70px;
+    @include squareCenter(70px);
     border-radius: 50%;
 
     &:hover {
@@ -67,16 +69,12 @@
     }
     
     @include breakpoint(small) {
-      height: 45px;
-      width: 45px;
-      line-height: 45px;
+      @include squareCenter(45px);
 
     }
 
     @include breakpoint(xsmall) {
-      height: 30px;
-      width: 30px;
-      line-height: 30px;
+      @include squareCenter(30px);
     }
 
   }

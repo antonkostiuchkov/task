@@ -12,3 +12,10 @@
 	  @media (max-width: 320px)  { @content; }
   }
 }
+
+
+@mixin squareCenter($size){
+  height: $size;
+  width: $size;
+  line-height: $size;
+}

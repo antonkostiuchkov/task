@@ -24,22 +24,16 @@ $text-box-heightXS: 75px;
     }
 
     .button {
-      width: $text-box-height;
-      height: $text-box-height;
-      line-height: $text-box-height;
+      @include squareCenter($text-box-height);
       background-color: $pink;
       font-size: responsive 16px 50px;
       
       @include breakpoint(small) {
-        width: $text-box-heightS;
-        height: $text-box-heightS;
-        line-height: $text-box-heightS;
+        @include squareCenter($text-box-heightS);
       }
 
       @include breakpoint(xsmall) {
-        width: $text-box-heightXS;
-        height: $text-box-heightXS;
-        line-height: $text-box-heightXS;
+        @include squareCenter($text-box-heightXS);
       }
 
       &:hover {

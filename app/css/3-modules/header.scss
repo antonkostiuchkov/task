@@ -1,4 +1,6 @@
 $header-height: 100px;
+$header-heightS: 75px;
+$header-heightXS: 37px;
 
 
 
@@ -8,13 +10,13 @@ header {
   height: $header-height;
   
   @include breakpoint(small) {
-    height: 75px;
+    height: $header-heightS;
     clear: fix;
     position: relative;
   }
 
   @include breakpoint(xsmall) {
-    height: 37px;
+    height: $header-heightXS;
   }
 
   nav {
@@ -63,34 +65,30 @@ header {
 
   h2 {
     float: left;
-    line-height: 75px;
+    line-height: $header-heightS;
     font-size: responsive 14px 56px;
     margin: 0 19px;
     letter-spacing: 1px;
 
     @include breakpoint(xsmall) {
-      line-height: 37px;
+      line-height: $header-heightXS;
     }
   }
 }
 
 #menu-toggle {
   display: inline-block;
-  height: 75px;
-  width: 75px;
-  line-height: 75px;
   float: right;
   background-color: $dark-grey;
   color: $white;
   overflow: hidden;
   font-size: 25px;
   text-align: center;
+  @include squareCenter($header-heightS);
 
   @include breakpoint(xsmall) {
     font-size: 14px;
-    height: 37px;
-    width: 37px;
-    line-height: 37px;
+    @include squareCenter($header-heightXS);
   }
 
   div {
@@ -115,7 +113,6 @@ header {
   width: 210px;
   height: 100%;
   padding: 0 10px;
-  -webkit-transform: translateZ(0);
 
   @include breakpoint(xsmall) {
     top: 37px;
